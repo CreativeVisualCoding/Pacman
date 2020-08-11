@@ -75,20 +75,28 @@ for ( int i= 0; i<points.size(); i++) {
 void keyPressed() {
   if (key == CODED) {
     if (keyCode == UP) {
+      if(pacman.getY()>10){
       pacman.setY(-15);
       pacman.setAngle(+5);
+      }
     }
     if (keyCode == DOWN) {
+      if(pacman.getY()<790){
       pacman.setY(15);
       pacman.setAngle(-4.5);
+      }
     }
     if (keyCode == LEFT) {
+      if(pacman.getX()>10){
       pacman.setX(-15);
       pacman.setAngle(-15.5);
+      }
     }
     if (keyCode ==RIGHT) {
+      if(pacman.getX()<790){
       pacman.setX(15);
       pacman.setAngle(0);
+    }
     }
   }
 }
